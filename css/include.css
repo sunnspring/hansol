@@ -1,0 +1,171 @@
+@charset "utf-8";
+
+/*헤더*/
+#header{
+	text-align: center;
+	margin: 30px 50px;
+	position: relative;
+	height: 45px;
+	line-height: 45px;
+}
+
+#header h1{
+	width: 110px;
+	height: 45px;
+	background: url(../images/sp_com.png) no-repeat -300px -5px;
+	text-indent: -9999px;
+	position: absolute;
+	left: 0;
+}
+#header h1 a{display: block;}
+
+.gnb{display: inline-block;}
+.gnb>li{
+	float: left;
+	padding: 0 30px;
+	position: relative;
+}
+
+.gnb>li::after{
+	content: "";
+	display: block;
+	width: 100%;
+	height: 2px;
+	background-color: #2b5d79;
+	position: absolute;
+	left: 0;
+	bottom: -30px;
+	transform: scale(0);
+	transition: transform 0.5s;
+}
+
+.gnb>li:hover::after{
+	transform: scale(1);
+}
+.gnb li a{}
+
+.lnb{
+	position: absolute;
+	left: 0;
+	top: 75px;
+	z-index: 1;
+	font-size: 14px;
+	width: 100%;
+	max-height: 0;
+	overflow: hidden;
+	background-color: rgba(255,255,255,0.7);
+	transition: max-height 1s;
+	border-radius: 0 0 20px 20px;
+}
+.lnb li{}
+.lnb li a{display: block;}
+
+.gnb>li:hover .lnb{max-height: 300px;}
+.lnb li:hover a{
+	color: #2b5d79;
+	font-weight: 600;
+}
+
+.util{
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-size: 13px;
+}
+.util li{float: left;}
+.util li::after{
+	content: "";
+	display: inline-block;
+	width: 1px;
+	height: 8px;
+	background-color: #333;
+	margin: 0 5px;
+}
+.util li:last-child::after{display: none;}
+.util li a{}
+
+/*푸터*/
+
+#footer{
+	color: #fff;
+	font-size: 13px;
+}
+
+.f_top{
+	background: #383F43;
+	padding: 10px 0;
+}
+
+.f_menu{
+	float: left;
+	line-height: 40px;
+}
+.f_menu li{float: left;}
+.f_menu li a{color: #fff;}
+
+.f_menu li::after{
+	content: "";
+	display: inline-block;
+	width: 1px;
+	height: 8px;
+	background-color: #fff;
+	margin: 0 5px;
+}
+.f2 li:last-child::after{display: none;}
+
+.cs_family{float: right;}
+.cs_box,.family_box{
+	float: left;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 15px;
+}
+.cs_box{
+	background-color: #2A3033;
+}
+.cs_box span{
+	font-weight: bold;
+	vertical-align: top;
+}
+.cs_box .num{
+	font-size: 22px;
+	font-weight: normal;
+	vertical-align: top;
+	padding-left: 10px;
+}
+.family_box{
+	color: #333;
+	width: 150px;
+	background: #fff url(../images/arrow.png) no-repeat 95% center;
+	margin-left: 10px;
+}
+
+
+.f_bottom{
+	background: #4C5459;
+	text-align: center;
+	padding: 30px 0;
+}
+
+.f_logo{
+	width: 130px;
+	height: 50px;
+	background: url(../images/sp_com.png) no-repeat -150px 0px;
+	margin: 0 auto;
+	text-indent: -9999px;
+	margin-bottom: 20px;
+}
+
+.f_bottom .p_top{font-size: 0;}
+.f_bottom p{margin-top: 10px;}
+.f_bottom p span{font-size: 13px;}
+
+.f_bottom p span::after{
+	content: "";
+	display: inline-block;
+	width: 1px;
+	height: 8px;
+	background-color: #fff;
+	margin: 0 5px;
+}
+.f_bottom p span:last-child::after{display: none;}
